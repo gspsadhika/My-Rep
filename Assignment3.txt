@@ -1,0 +1,38 @@
+package com.cts.main;
+import java.util.Scanner;
+
+public class Assignment3 {
+	public static void main (String args[])
+	{
+		int amount, n2=0,n4=0,n6=0,n8=0;
+		Scanner sc=new Scanner(System.in);
+		System.out.println("enter the amount as multiple of 100");
+		amount=sc.nextInt();
+		if(amount>=2000)
+		{		
+		n2=amount/2000;
+		amount=amount-n2*2000;
+		System.out.println(+n2);
+		}
+		if(amount>=500)
+		{
+			
+			n4=amount/500;
+			amount=amount-n4*500;
+			System.out.println(+n4);
+		}
+		if(amount>=200)
+		{
+			n6=amount/200;
+			amount=amount-n6*200;
+			System.out.println(+n6);
+		}
+		if(amount>=100)
+		{
+			n8=amount/100;
+			amount=amount-n8*100;
+			System.out.println(+n8);
+		}
+	}
+}
+		
