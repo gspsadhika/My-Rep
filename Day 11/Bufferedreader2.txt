@@ -1,0 +1,16 @@
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
+
+
+public class BRexample2 {
+	public static void main(String args[]) throws IOException
+	{
+		String path= "C:\\Users\\Lenovo\\Desktop\\Files\\fh.txt";
+		FileWriter writer = new FileWriter(path);
+		BufferedWriter bw= new BufferedWriter(writer);
+		bw.write("This is buffered write example done on 13 January,2020");
+		bw.close();
+	}
+
+}

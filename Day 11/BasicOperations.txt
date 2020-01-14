@@ -1,0 +1,29 @@
+package com.cts.files;
+
+import java.nio.file.FileSystem;
+import java.nio.file.FileSystems;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.io.IOException;
+
+public class BasicOperations {
+public static void main(String args[]) throws IOException
+{
+	//FileSystem fs= FileSystems.getDefault();
+	//Path path= fs.getPath("C:\\Users\\Lenovo\\Desktop\\Files\\fh.txt");
+	Path path = Paths.get("C:\\Users\\Lenovo\\Desktop\\Files\\fh2.txt");
+	System.out.println("No. of folders in the path : " +path.getNameCount());
+	System.out.println(" Is Absolute? : " +path.isAbsolute());
+	System.out.println("Name on Index 2: " +path.getName(2));
+	long file= Files.size(path);
+	System.out.println("The size of the file is" +file);
+	byte[] bs= Files.readAllBytes(path);
+	System.out.println(bs);
+	
+
+	
+	
+	
+}
+}

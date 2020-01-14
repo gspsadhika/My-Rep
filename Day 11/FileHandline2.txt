@@ -1,0 +1,24 @@
+
+import java.io.IOException;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+
+
+public class FileHandling2 {
+	public static void main(String args[]) throws IOException
+	{
+	String path="C:\\Users\\Lenovo\\Desktop\\Files\\fh.txt";
+	//File file=new File (path);
+	FileInputStream fin= new FileInputStream(path);
+	FileOutputStream fout= new FileOutputStream("copied.txt");
+	int i;
+	while((i=fin.read()) != -1)
+	{
+		fout.write(i);
+		System.out.println((char)i);
+	}
+	fin.close();	
+	fout.close();
+	}
+
+}

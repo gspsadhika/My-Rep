@@ -1,0 +1,62 @@
+package com.cts.thread;
+
+public class ThreadSync 
+{
+	public static void main(String[]args)
+	{
+	    Resource resource = new Resource();
+		FirstThread1 firstThread= new FirstThread1(resource);
+		SecondThread1 secondThread= new SecondThread1(resource);
+		Thread threadOne= new Thread(firstThread);
+		Thread threadTwo= new Thread(secondThread);
+		threadOne.start();
+		threadTwo.start();
+	}
+}
+	class FirstThread1 implements Runnable
+	{
+		Resource resource;
+		public FirstThread1(Resource resource)
+		{
+			this.resource=resource;
+		}
+		public void run()
+		{
+			resource.display("First Thread");
+		}
+		
+	 }
+	
+	class SecondThread1 implements Runnable
+	{
+		Resource resource;
+		public SecondThread1(Resource resource)
+		{
+			this.resource=resource;
+		}
+		public void run()
+		{
+			resource.display("Second Thread");
+		}
+	}
+	class Resource
+	{
+		public synchronized void display(String message)
+		{
+			for(int i=1;i<=5;i++)
+			{
+				System.out.println(message+ " " +i);
+				try {
+					Thread.sleep(3000);
+				    }
+				catch(InterruptedException e)
+				{
+					e.printStackTrace();
+				}
+			}
+		}
+	}
+
+	
+
+
