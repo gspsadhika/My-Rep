@@ -1,0 +1,252 @@
+/*Write a Program that accepts a number and checks whether it's positive, negative, or Zero.*/
+
+package com.cts.main;
+import java.util.Scanner;
+public class Number 
+{
+public static void main(String[] args)
+{
+	int no;	
+	Scanner sc= new Scanner(System.in);
+	System.out.println("enter a number");
+	no=sc.nextInt();	
+	if (no>0)
+	{
+		System.out.println("Number is positive");
+	}
+	else if(no<0)
+	{ 
+		System.out.println("Number is negative");
+	}
+	else 
+        {
+		System.out.println("Zero");
+	}
+}
+}
+
+/*Write a Program that accepts the length and breadth of a rectangle and displays its area and perimeter.*/
+package com.cts.main;
+
+import java.util.Scanner;
+public class Rectangle {
+	public static void main(String[] args)
+	{
+	int a,b, area, perimeter;
+	Scanner sc= new Scanner(System.in);
+	System.out.println("Enter the length of the rectangle");
+	a=sc.nextInt();
+	System.out.println("Enter the breadth of the rectangle");
+	b=sc.nextInt();
+	area=a*b;
+	System.out.println("Area of the rectangle is" +area);
+	perimeter=(a*2)+(b*2);
+	System.out.println("Perimeter of the rectangle is" +perimeter);
+
+*/Write a Program to accept three numbers and to display the largest of the three numbers.*/
+
+package com.cts.main;
+import java.util.Scanner;
+public class Greatest 
+{
+	public static void main(String[] args)
+	{
+		int n1,n2,n3;
+		Scanner sc= new Scanner(System.in);
+		System.out.println("Enter the first number");
+		n1=sc.nextInt();
+		System.out.println("Enter the second number");
+		n2=sc.nextInt();
+		System.out.print("Enter the third number");
+		n3=sc.nextInt();
+		if(n1>=n2 && n1>=n3)
+		{
+			System.out.println(n1+ "is the greatest");
+		}
+		else if (n2>=n1 && n2>=n3)
+		{
+			System.out.println(n2+"is the greatest");
+		}
+		else 
+		{
+			System.out.println(n3+ "is the greatest");
+		}
+	}
+
+}
+
+}
+}
+*/Consider a scenario where all candidates have to take two tests before appearing for an
+   interview. A candidate is selected for the interview round, based on the scores of the two
+   tests. The individual score in each test should be greater than 75, and the average
+   score for the two tests should be a minimum of 80. A call letter for the interview is to
+   be sent to candidates who have been selected, and a rejection letter is to be sent to
+   the rest./*
+
+package com.cts.main;
+import java.util.Scanner;
+public class Test {
+	public static void main(String args[])
+	{
+		int test1, test2, average;
+		Scanner sc= new Scanner(System.in);
+		System.out.println("Enter the score of first test");
+		test1= sc.nextInt();
+		System.out.println("Enter the score of second test");
+		test2=sc.nextInt();
+		average=((test1+test2)/2);
+		if ((test1>=75) && (test2>=75))
+		{
+			if(average==80)
+			{
+				System.out.println("The student is sent to interview round");
+			}
+		
+		else
+			System.out.println("The student is not selected for interview round");
+		}
+		else 
+			System.out.println("The student is not selected for interview round");
+	}
+	}
+*/Consider an example, where the discount percentage on a TV needs to be decided on the basis of the type of TV. If the TV is CRT (C), the discount will be 5% of the
+selling price (SP). If the TV is LCD (L), then the discount will depend on the size of the TV screen. For 14 inches screen, the discount is 8% of the SP. For 21 inches
+screen, the discount is 10% of the SP./*
+
+public class Disc {
+	public static void main(String args[])
+	{
+	int inch, SP;
+	double discount=0;
+	String type;
+	Scanner sc= new Scanner(System.in);
+	System.out.println("Enter the selling price of the TV");
+	SP= sc.nextInt();
+	System.out.println("Enter the type of the TV"); 
+	type=sc.nextLine();
+if(type.contentEquals("CRT"))
+{
+	discount=(0.05*SP);
+	System.out.println("Discount is" +discount);
+}
+else if(type.contentEquals("LCD"))
+{
+	System.out.println("Enter the number of inches");
+	inch=sc.nextInt();
+	if (inch==14)
+		discount=(0.08*SP);
+	System.out.println("Discount is"+discount);
+	if(inch==21)
+		discount=(0.1*SP);
+	System.out.println("Discount is"+discount);
+}
+
+}
+}
+
+*/ You have to write a Program that accepts the product name and quantity as input
+   and displays the total price using the unit prices already stored in the system /*
+
+package com.cts.main;
+
+import java.util.Scanner;
+
+public class Three {
+	public static void main(String[] args)
+	{
+		int quantity, price;
+		String name;
+		Scanner sc = new Scanner(System.in);
+		System.out.println("enter the quantity of items");		
+		quantity=sc.nextInt();
+		System.out.println("enter the name of the product");
+		name=sc.nextLine();
+		if(name.contentEquals("oranges"))
+		{
+			price=(quantity*3);
+			System.out.println("Total Price is" +price);
+		}
+		else
+		{ 
+			System.out.println("Not a valid product");
+		}
+		
+		
+	}
+
+}
+
+*/ Write a Program to accept hours and number of resources and display the total
+   number of productive hours. (Total number of productive hours = hours * number of
+   resources)/*
+package com.cts.main;
+
+import java.util.Scanner;
+
+public class Session {
+	public static void main(String[] args)
+	{
+		int resources, hours, prohours;
+		Scanner sc= new Scanner (System.in);
+		System.out.println("enter the number of resources");
+		resources= sc.nextInt();
+		System.out.println("enter the number of hours");
+		hours=sc.nextInt();
+		prohours=resources*hours;
+		System.out.println("Total nmber of productive hours is"+prohours);
+	}
+
+}
+
+*/ Write a Program to accept the age of the user and then, display the category of the
+   user. Based on the age, the categories of the users are:
+	05-12 Children
+	13-19 Teenagers
+	20-35 Young adults
+	36-45 Mature adults
+	46-55 Elders
+	56 and above Seniors /*
+
+package com.cts.main;
+import java.util.Scanner;
+public class Category{
+	public static void main(String[] args)
+	{
+	int age;
+	Scanner sc= new Scanner(System.in);
+	System.out.println("Enter the age of the user");
+	age=sc.nextInt();
+	78	if (age>=5 && age<=12)
+	{
+		System.out.println("The user is a child");
+	}
+	else if(age>=13 && age<=19)
+	{
+		System.out.println("The user is a teenager");
+	}
+	else if(age>=20 && age<=35)
+	{
+		System.out.println("The user is a Young adult");
+	}
+	else if(age>=36 && age<=45)
+	{
+		System.out.println("The user is a Mature adult");
+	}
+	else if(age>=46 && age<=55)
+	{
+		System.out.println("The user is an Elder");
+	}
+	else if (age>=56 && age<=100)
+	{
+		System.out.println("The user is a senior citizen");
+	}
+	else
+		System.out.println("Invalid number has been entered");
+	}
+}
+
+
+
+
+
