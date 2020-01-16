@@ -1,0 +1,42 @@
+package com.cts.stream;
+
+import java.util.List;
+import java.util.ArrayList;
+import java.util.stream.Collectors;
+
+
+public class EmployeeStream {
+	public static void main(String args[])
+	{
+		List<Employee> employees= new ArrayList<Employee>();
+		addEmployees(employees);
+		//Employees with age less than 22
+		List<Employee> ageScale= employees.stream().filter(emp -> emp.getAge()<22 ).collect(Collectors.toList());		
+		System.out.println("Employees with age less than 22 : \n");
+		ageScale.forEach(System.out::println);
+		//Employees with names greater than length 5
+		List<Employee> getName= employees.stream().filter(emp -> emp.getName().length()>=5 ).collect(Collectors.toList());
+		System.out.println("Employees with name length greater than or equal to 5 are : \n");
+		getName.forEach(System.out::println);
+		//Increase the Salary by 10%
+		List<Employee> salIncrease= employees.stream().map(emp -> {emp.setSalary(emp.getSalary() * 1.1); return emp;}).collect(Collectors.toList());
+		System.out.println("Salary after increment: \n");
+		salIncrease.forEach(System.out::println);
+	}
+
+	private static void addEmployees (List<Employee> employees)
+	{
+		Employee emp1 = new Employee(211, "Abin", "Hyderabad", 22, 245693L, 989899943);
+		Employee emp2 = new Employee(212, "Anu", "Gujarat", 21, 225785L, 984574943);
+		Employee emp3 = new Employee(213, "Tanu", "Kolkata", 23, 3256728L, 98799943);
+		Employee emp4 = new Employee(214, "Rishi", "Bangalore", 25, 6294878L, 90769943);
+		Employee emp5 = new Employee(215, "Sri", "Chennai", 26, 667598L, 98937453);
+		employees.add(emp1);
+		employees.add(emp2);
+		employees.add(emp3);
+		employees.add(emp4);
+		employees.add(emp5);
+		
+	}
+}	
+	

@@ -1,0 +1,49 @@
+package com.cts.serial;
+import java.io.*;
+
+import com.cts.stream.Employee;
+
+public class SerializationDemo {
+public static Object deserialize(String fileName) throws ClassNotFoundException, IOException
+{
+	FileInputStream fin= new FileInputStream(fileName);
+	BufferedInputStream bin= new BufferedInputStream(fin);
+	ObjectInputStream oin= new ObjectInputStream(bin);
+	Object obj= oin.readObject();
+	oin.close();
+	bin.close();
+	fin.close();
+	return obj;
+	
+	
+}
+public static void serialize(Object obj, String fileName) throws FileNotFoundException, IOException
+{
+	FileOutputStream fout = new FileOutputStream(fileName);
+	BufferedOutputStream bout= new BufferedOutputStream(fout);
+	ObjectOutputStream out= new ObjectOutputStream(bout);
+	out.writeObject(obj);
+	out.close();
+	bout.close();
+	fout.close();
+}
+public static void main(String[] args) throws ClassNotFoundException, IOException
+{
+	Employee employee= new Employee(1111, "Sai Kiran", "Kolhapur", 31, 884l, 90909);
+	try
+	{
+		serialize(employee, "serial.txt");
+		Employee emp= (Employee) deserialize ("serial.txt");
+		System.out.println(emp);
+	}
+	catch(ClassNotFoundException e)
+	{
+		e.printStackTrace();
+	}
+	catch(FileNotFoundException e)
+	{
+		e.printStackTrace();
+	}
+	}
+}
+
