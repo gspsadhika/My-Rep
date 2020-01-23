@@ -5,36 +5,85 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Login</title>
     <style>
-        body
-        {
-            background-image: url("1.jpg");
-            height:100%;            
+      body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: white;
+    }
 
-        }
-      
-  </style>
+*{
+  box-sizing: border-box;
+ }
+
+
+.container {
+  padding: 16px;
+  background-color: white;
+}
+  input[type=text], select {
+  width: 100%;
+  padding: 10px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid rgb(160, 160, 160);
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+input[type=password], select{
+  width:100%;
+  padding: 10px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid rgb(160,160,160);
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+div {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+input[type=submit]:hover {
+  background-color: rgb(102,76,175);
+}
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+
+.registerbtn {
+  background-color: rgb(102, 76, 175);
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+</style>
+
 </head>
 <body>
 <form action="action_page.php" method="post">
-    <label for="user"><b>Email</b></label>
-    <input type="text" placeholder="Enter Email" name="user" required> <br>
-
-    <label for="psw"><b>Password</b></label>
-    <input type="password" placeholder="Enter Password" name="psw" required> <br>
-
-    <button type="submit">Login</button>
+  <div class="container"></div>
+  <h1 align="center"> Welcome to Login</h1>
+  <hr>
+    <p><input type="text" placeholder="Enter Email" name="user" required></p>    
+    <p><input type="password" placeholder="Enter Password" name="psw" required></p>
+    <br>
+    <button type="submit" class="registerbtn">Login</button>
     <label>
-    <input type="checkbox" checked="checked" name="remember"> Remember me <br>
+    <input type="checkbox" checked="unchecked" name="remember"> Remember me <br>
     </label>
     <div>
-    <button type="button" class="cancelbtn">Cancel</button>
-    <span class="psw">Forgot <a href="#">password?</a></span>
-    <span class= "nuser"> <a href="Signup1.html">Register here</a></span>
-
-  </div>
-  </div>
+    <span class="psw">Forgot <a href="#">Password?</a></span>
+    <hr>
+    <span class= "nuser"> <a href="Signup.html">Register here</a></span>
+    </div>
+    </div>
 </form>
 </body>
 </html>
