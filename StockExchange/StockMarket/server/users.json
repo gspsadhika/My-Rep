@@ -1,0 +1,17 @@
+{
+  "users":[
+    {
+    "email":"sai@gmail.com",
+    "password":"sairam",
+    "confirm password": "sairam",
+    "mobile": "9849100500"
+
+    },
+    {
+    "email":"sri@gmail.com",
+    "password":"srinija",
+    "confirm password": "srinija",
+    "mobile": "9989100500"
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+<table class="table">
+    <tr>
+        <th> Email</th>
+        <th> Password </th>
+        <th> Confirm Password</th>
+        <th> Mobile </th>
+    </tr>
+    <tr *ngFor="let user of users">
+        <td>{{user.email}}</td>
+        <td>{{user.password}}</td>
+        <td>{{user.confirmPassword}}</td>
+        <td>{{user.mobile}}</td>
+    </tr>
+</table>
