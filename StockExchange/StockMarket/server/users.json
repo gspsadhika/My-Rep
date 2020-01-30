@@ -1,17 +1,23 @@
 {
-  "users":[
+  "users": [
     {
-    "email":"sai@gmail.com",
-    "password":"sairam",
-    "confirm password": "sairam",
-    "mobile": "9849100500"
-
+      "email": "sai@gmail.com",
+      "password": "sairam",
+      "confirm password": "sairam",
+      "mobile": "9849100500"
     },
     {
-    "email":"sri@gmail.com",
-    "password":"srinija",
-    "confirm password": "srinija",
-    "mobile": "9989100500"
+      "email": "sri@gmail.com",
+      "password": "srinija",
+      "confirm password": "srinija",
+      "mobile": "9989100500"
+    },
+    {
+      "id": 101,
+      "email": "chintu@gmail.com",
+      "password": "oops",
+      "confirmPassword": "oops",
+      "mobile": 0
     }
   ]
 }

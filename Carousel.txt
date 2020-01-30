@@ -1,0 +1,34 @@
+<div id="demo" class="carousel slide" data-ride="carousel">
+  <ul class="carousel-indicators">
+    <li data-target="#demo" data-slide-to="0" class="active"></li>
+    <li data-target="#demo" data-slide-to="1"></li>
+    <li data-target="#demo" data-slide-to="2"></li>
+  </ul>
+  <div class="carousel-inner">
+  <div class="carousel-item active">
+  <div class="text-center">
+     <img src="https://www.dsij.in/Portals/0/EasyDNNnews/6331/img-Stock-ChartsOverWorld-04-adobe.jpg" alt="stock" width="1000" height="500">
+  <div class="carousel-caption">
+  </div>  
+  </div> 
+  
+  <div class="carousel-item">
+      <img src="https://img.etimg.com/thumb/width-640,height-480,imgsize-61517,resizemode-1,msid-64230310/why-you-should-not-try-to-time-the-stock-market.jpg" alt="Chicago" width="1000" height="500">
+  <div class="carousel-caption">
+        
+    </div>   
+    </div>
+    <div class="carousel-item">
+      <img src="https://image.shutterstock.com/image-illustration/3d-finance-stock-market-exchange-260nw-273602777.jpg" alt="New York" width="1000" height="500">
+    <div class="carousel-caption">        
+    </div>   
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#demo" data-slide="prev" >
+    <span class="carousel-control-prev-icon"></span>
+  </a>
+  <a class="carousel-control-next" href="#demo" data-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </a>
+</div>
+</div>

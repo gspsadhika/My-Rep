@@ -3,6 +3,7 @@ import { User } from './models/user';
 import { Observable } from 'rxjs';
 import {HttpClient} from '@angular/common/http';
 
+
 @Injectable({
   providedIn: 'root'
 })
@@ -19,8 +20,13 @@ saveUser(user:User):Observable<User>
 {
   return this.httpClient.post<User>(this.httpUrl, user);
 }
-// deleteUser(email:String):Observable<User>
-// {
-//   return this.httpClient.delete<User>(this.httpUrl + '/' + email);
-// }
+ deleteUser(id:number):Observable<User>
+ {
+   return this.httpClient.delete<User>(this.httpUrl + '/' + id);
+ }
+ updateUser(user:User):Observable<User>
+ {
+   return this.httpClient.put<User>(this.httpUrl+user.id,user);
+ }
+
 }

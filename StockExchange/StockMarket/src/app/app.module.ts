@@ -9,6 +9,7 @@ import { LoginComponent } from './login/login.component';
 import { UsersComponent } from './users/users.component';
 import { HttpClientModule } from '@angular/common/http';
 import { UserService } from './user.service';
+import { AdminComponent } from './admin/admin.component';
 
 
 @NgModule({
@@ -17,6 +18,7 @@ import { UserService } from './user.service';
     RegisterComponent,
     LoginComponent,
     UsersComponent,
+    AdminComponent,
 
   ],
   imports: [

@@ -1,0 +1,54 @@
+<html>
+<head>
+<script>
+    function openForm() {
+      document.getElementById("adminForm").style.display = "block";
+    }
+   
+    function closeForm() {
+      document.getElementById("adminForm").style.display = "none";
+    }
+    </script>
+</head>
+<body style="background-color:aliceblue;">
+<div class="container-fluid">
+<div class="jumbotron jumbotron-fluid">
+<h1> WELCOME, ADMIN </h1>
+<hr>
+</div>
+</div>
+<div>
+<nav class="navbar navbar-expand-sm bg-dark">
+  <ul class="navbar nav">
+    <li class="nav-item">
+      <button class="nav-link" style="color: #212529;" onclick="openForm()">Import Data</button>
+     
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" routerLink="exchange.html" target="_blank">Stock Exchange Details</a>
+    </li>  
+      <li class= "nav-item">
+          <a class="nav-link" routerLink="company.html" target="_blank">Company Details</a>
+      </li>
+      <li class="nav-item">
+          <a class="nav-link" routerLink="ipo.html" target="_blank">Update IPO Details</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="Logout.html" target="_top">Logout</a>
+      </li>
+  </ul>
+</nav>
+</div>
+<hr>
+<div class="form-popup" id="adminForm">
+  <h5>Select the excel file to upload..</h5>
+  <form [formGroup]= "adminForm" novalidate class="form">
+   <input type="file" id="myFile" name="filename">
+  <button type="submit">Upload</button>
+</form>
+
+   
+</div>
+</body>
+
+</html>
