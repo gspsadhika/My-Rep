@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <CANVAS ID="myCanvas" width="500" height="500" style="border:1px solid
+black">
+</CANVAS> 
+<script>
+var c=document.getElementById("myCanvas");
+var ctx= c.getContext("2d");
+ctx.stroke();
+ctx.rect(100,100,100,100);
+ctx.stroke();
+ctx.shadowBlur="30";
+ctx.shadowColor="blue";
+ctx.fillStyle="red";
+ctx.fillRect(50,50,50,50);
+ctx.clearRect(25,20,25,20);
+ctx.strokeStyle="blue";
+ctx.strokeRect(200,200,200,200);
+
+
+
+
+
+
+</script>
+    
+</body>
+</html>

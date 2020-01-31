@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                                   "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Jan 31, 2020 2:31:33 PM by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+ <class name="com.cts.training.model.User" table="USER">
+  <id name="id" type="int">
+   <column name="ID"/>
+   <generator class="assigned"/>
+  </id>
+  <property generated="never" lazy="false" name="name" type="java.lang.String">
+   <column name="NAME"/>
+  </property>
+  <property generated="never" lazy="false" name="password" type="java.lang.String">
+   <column name="PASSWORD"/>
+  </property>
+  <property generated="never" lazy="false" name="email" type="java.lang.String">
+   <column name="EMAIL"/>
+  </property>
+  <property generated="never" lazy="false" name="phone" type="long">
+   <column name="PHONE"/>
+  </property>
+  <property generated="never" lazy="false" name="enabled" type="boolean">
+   <column name="ENABLED"/>
+  </property>
+ </class>
+</hibernate-mapping>
