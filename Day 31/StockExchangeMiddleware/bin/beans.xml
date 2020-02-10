@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<bean id="user" class="com.cts.training.model.UserEntity" >
+<property name="id" value="101" />
+<property name= "username" value="admin" />
+<property name= "password" value="admin@123" />
+<property name="email" value="gsp@gmail.com" />
+<property name="phone" value="87678" />
+<property name="enabled" value= "true" />
+</bean>
+
+</beans>
