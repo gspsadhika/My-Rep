@@ -8,3 +8,12 @@ Spring JDBC Template with examples.
 Day 38
 Spring Security Methods.
 Filters
+
+
+15.02.2020
+Day 39
+Internal Hackathon to develop ECommerce Application
+
+17.02.2020
+Day 40
+Aggregate Functions, Correlated Queries, Spring Security
