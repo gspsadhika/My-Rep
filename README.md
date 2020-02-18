@@ -17,3 +17,8 @@ Internal Hackathon to develop ECommerce Application
 17.02.2020
 Day 40
 Aggregate Functions, Correlated Queries, Spring Security
+
+18.02.2020
+Dy 41
+PLSQL Procedures, Functions
+Web Services

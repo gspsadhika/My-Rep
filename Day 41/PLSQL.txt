@@ -1,0 +1,87 @@
+1. To select the customer who made the maximum purchase by price
+select customername from Orders o join customers c where o.customerid=c.customerid and orderid in (select orderid from OrderDetails where price= (select max(price) from OrderDetails));
+
+Demonstrate procedures and functions
+2.
+delimiter $$
+create procedure p1(in a integer)
+begin
+if a%2=0 then
+select 'even no';
+else 
+select 'odd no';
+end if;
+end $$
+delimiter ;
+
+set@n=21;
+call p1(@n);
+
+3.
+delimiter $$
+create procedure p2(in empno int)
+begin
+declare cnt int;
+select count(*) into cnt from emp where id=empno;
+select cnt;
+end $$
+delimiter ;
+
+
+4.
+delimiter $$
+create procedure p3(in dnm varchar(20), out cnt integer)
+begin
+select count(*) into cnt from emp where room=(select deptid from Department where DeptName="biology");
+end $$
+delimiter ;
+set @dn=10;
+call p3(@deptname, @deptid);
+
+5.
+delimiter $$
+create function f1(id1 int) returns varchar(20)
+begin
+declare nm varchar(20);
+select name into nm from emp where id=id1;
+return nm;
+end $$
+delimiter ;
+
+set @name=f1(2);
+select @name;
+
+6. 
+delimiter $$
+create function f2 (id2 int) returns varchar(20)
+begin
+declare nm varchar(20);
+select DeptName into nm from Department where Deptid=(select room from emp where id=id2);
+return nm;
+end $$
+delimiter ;
+
+
+7. 
+delimiter $$
+create procedure p4(in dm varchar(20), out cnt integer, out empname varchar(20))
+begin
+
+select count(*) into cnt from emp where room=(select DeptName from Department where DeptId=102);
+select count(*) into empname from emp where salary>2000;
+
+end $$
+delimiter ;
+
+call p4(@d1,@d2,@d3)
+
+8. 
+delimiter $$
+create trigger saltgr
+after delete
+on emp for each row
+begin
+insert into newemp values(old.id, old.name, old.room, old.salary);
+end $$
+delimiter ;
+ 
