@@ -22,3 +22,7 @@ Aggregate Functions, Correlated Queries, Spring Security
 Dy 41
 PLSQL Procedures, Functions
 Web Services
+
+19.02.2020
+Day 42
+RestAPI, Spring Boot
