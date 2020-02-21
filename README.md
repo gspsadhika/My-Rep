@@ -26,3 +26,7 @@ Web Services
 19.02.2020
 Day 42
 RestAPI, Spring Boot
+
+21.02.2020
+Day 44
+SpringBootSecurity
