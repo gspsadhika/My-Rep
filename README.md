@@ -30,3 +30,11 @@ RestAPI, Spring Boot
 21.02.2020
 Day 44
 SpringBootSecurity
+
+Day 45, 46
+Project 
+
+25.02.2020
+Day 47
+Mail Activation
+Project
