@@ -38,3 +38,9 @@ Project
 Day 47
 Mail Activation
 Project
+
+26.02.2020
+Day 48
+Project work
+
+KBA on Angular and MySQL
