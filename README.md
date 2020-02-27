@@ -44,3 +44,9 @@ Day 48
 Project work
 
 KBA on Angular and MySQL
+
+27.02.2020
+Day 49
+Project Work
+Email Activation
+Actuators, Profiles
