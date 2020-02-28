@@ -50,3 +50,7 @@ Day 49
 Project Work
 Email Activation
 Actuators, Profiles
+
+28.02.2020
+Day 50
+Service Layer (Layered Architecture)
