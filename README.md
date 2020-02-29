@@ -54,3 +54,7 @@ Actuators, Profiles
 28.02.2020
 Day 50
 Service Layer (Layered Architecture)
+
+29.02.2020
+Day 51
+Codesprint
