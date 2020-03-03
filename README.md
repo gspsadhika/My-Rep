@@ -59,5 +59,12 @@ Service Layer (Layered Architecture)
 Day 51
 Codesprint
 
-3.03.2020
+2.03.2020
+Day 52
 Microservices
+
+3.03.2020
+Day 53
+Basics of Eureka, Ribbon and Feign (Netflix)
+
+
