@@ -67,4 +67,13 @@ Microservices
 Day 53
 Basics of Eureka, Ribbon and Feign (Netflix)
 
+4.03.2020
+Day 54
+Integration Testing, Mockito Testing
+
+5.03.2020
+Zuul API Gateway
+
+
+
 
