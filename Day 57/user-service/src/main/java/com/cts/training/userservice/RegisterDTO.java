@@ -4,7 +4,6 @@ public class RegisterDTO {
 	
 	
 	private int id;
-	private String username;
 	private String email;
 	private String password;
 	private String confirmPassword;
@@ -27,14 +26,6 @@ public class RegisterDTO {
 	public int getId() {
 		return id;
 	}
-	public String getUsername() {
-		return username;
-	}
-
-	public void setUsername(String username) {
-		this.username = username;
-	}
-
 	public void setId(int id) {
 		this.id = id;
 	}

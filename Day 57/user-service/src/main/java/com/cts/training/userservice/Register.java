@@ -18,14 +18,13 @@ public class Register implements Serializable{
 	private static final long serialVersionUID = -8087800141201379851L;
 	@Id
 	@GeneratedValue
-	private int id;	
-	private String username;
+	private int id;
+
 	private String email;
 	private String password;
 	private String confirmPassword;
 	private long mobile;
 	
-
 	@Transient
 	private String regStatus;
 	private String active="no";
@@ -49,19 +48,17 @@ public class Register implements Serializable{
 
 	@Override
 	public String toString() {
-		return "Register [id=" + id + ", username=" + username + ", email=" + email + ", password=" + password + ", confirmPassword="
+		return "Register [id=" + id + ", email=" + email + ", password=" + password + ", confirmPassword="
 				+ confirmPassword + ", mobile=" + mobile + "]";
 	}
 
-	public Register(int id, String username, String email, String password, String confirmPassword, long mobile) {
+	public Register(int id, String email, String password, String confirmPassword, long mobile) {
 		super();
 		this.id = id;
-		this.username=username;
 		this.email = email;
 		this.password = password;
 		this.confirmPassword = confirmPassword;
 		this.mobile = mobile;
-		
 	}
 
 	public int getId() {
@@ -102,15 +99,6 @@ public class Register implements Serializable{
 
 	public void setMobile(long mobile) {
 		this.mobile = mobile;
-	}
-	
-
-	public String getUsername() {
-		return username;
-	}
-
-	public void setUsername(String username) {
-		this.username = username;
 	}
 
 	public Register() {

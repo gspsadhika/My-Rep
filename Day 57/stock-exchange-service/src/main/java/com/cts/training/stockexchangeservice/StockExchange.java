@@ -22,6 +22,7 @@ public class StockExchange implements Serializable {
 	@GeneratedValue
 	private int id;
 	
+	private String choosestock;
 	private String brief;
 	private String address;
 	public int getId() {
@@ -30,7 +31,12 @@ public class StockExchange implements Serializable {
 	public void setId(int id) {
 		this.id = id;
 	}
-	
+	public String getChoosestock() {
+		return choosestock;
+	}
+	public void setChoosestock(String choosestock) {
+		this.choosestock = choosestock;
+	}
 	public String getBrief() {
 		return brief;
 	}
@@ -45,12 +51,13 @@ public class StockExchange implements Serializable {
 	}
 	@Override
 	public String toString() {
-		return "StockExchange [id=" + id + ", brief=" + brief + ", address=" + address
+		return "StockExchange [id=" + id + ", choosestock=" + choosestock + ", brief=" + brief + ", address=" + address
 				+ "]";
 	}
 	public StockExchange(int id, String choosestock, String brief, String address) {
 		super();
 		this.id = id;
+		this.choosestock = choosestock;
 		this.brief = brief;
 		this.address = address;
 	}

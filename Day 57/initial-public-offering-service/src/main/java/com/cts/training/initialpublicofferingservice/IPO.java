@@ -1,7 +1,6 @@
 package com.cts.training.initialpublicofferingservice;
 
 import java.io.Serializable;
-import java.time.LocalDateTime;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -25,30 +24,23 @@ public class IPO implements Serializable {
 	private String stockexchange;
 	private int price;
 	private int totalnoofshares;
-	private LocalDateTime opendatetime;
 	private String remarks;
 	
-	
-
-	public IPO() {
-	}
-
-
 	@Override
 	public String toString() {
 		return "IPO [id=" + id + ", companyname=" + companyname + ", stockexchange=" + stockexchange + ", price="
-				+ price + ", totalnoofshares=" + totalnoofshares + ", opendatetime=" + opendatetime + ", remarks="
-				+ remarks + "]";
+				+ price + ", totalnoofshares=" + totalnoofshares + ", remarks=" + remarks + "]";
 	}
 
 
-	public LocalDateTime getOpendatetime() {
-		return opendatetime;
-	}
-
-
-	public void setOpendatetime(LocalDateTime opendatetime) {
-		this.opendatetime = opendatetime;
+	public IPO(int id, String companyname, String stockexchange, int price, int totalnoofshares, String remarks) {
+		super();
+		this.id = id;
+		this.companyname = companyname;
+		this.stockexchange = stockexchange;
+		this.price = price;
+		this.totalnoofshares = totalnoofshares;
+		this.remarks = remarks;
 	}
 
 
@@ -112,20 +104,9 @@ public class IPO implements Serializable {
 	}
 
 
-	public IPO(int id, String companyname, String stockexchange, int price, int totalnoofshares,
-			LocalDateTime opendatetime, String remarks) {
-		super();
-		this.id = id;
-		this.companyname = companyname;
-		this.stockexchange = stockexchange;
-		this.price = price;
-		this.totalnoofshares = totalnoofshares;
-		this.opendatetime = opendatetime;
-		this.remarks = remarks;
+	public IPO()
+	{
 	}
-
-
-	
 	
 }
 
