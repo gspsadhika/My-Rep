@@ -74,6 +74,10 @@ Integration Testing, Mockito Testing
 5.03.2020
 Zuul API Gateway
 
+9.03.2020
+Authorization implementation in Project
+Spring Boot Security
+
 
 
 
